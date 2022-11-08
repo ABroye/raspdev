@@ -1,0 +1,1337 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      type="description"
+      content="L'hébergement solidaire et participatif, vous connaissez ? Chez RaspDev, on vous accompagne dans la mise en place d'un serveur Web économique et écologique basé sur le Raspberry Pi"
+    />
+    <meta name="author" content="Alain BROYE - RaspDev.fr" />
+    <meta name="msapplication-TileColor" content="#da532c" />
+    <meta name="theme-color" content="#ffffff" />
+    <title>RaspDev | Hébergement Web solidaire</title>
+    <!-- Favicon -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="images/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="images/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="images/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="images/favicon/site.webmanifest" />
+    <link
+      rel="mask-icon"
+      href="images/favicon/safari-pinned-tab.svg"
+      color="#5bbad5"
+    />
+    <!-- Style CSS personnalisé -->
+    <link rel="stylesheet" href="css/raspdev-style.css" />
+    <link rel="stylesheet" href="css/scrollToTop.css" />
+    <!-- Style CSS Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="body">
+    <!-- En tête -->
+    <header class="header p-3">
+      <!-- Barre de navigation -->
+      <nav
+        class="navbar navbar-expand-lg navbar-dark bg-dark bg-gradient fixed-top shadow-lg"
+        aria-label="navbar"
+      >
+        <div class="container-fluid">
+          <!-- Logo -->
+          <picture
+            class="d-flex align-items-center mb-2 mb-lg-0 text-decoration-none"
+          >
+            <img class="logo pb-1" src="img/logo.svg" alt="Logo RaspDev" />
+          </picture>
+          <!-- Nom du site web -->
+          <a class="navbar-brand" href="index.html"
+            >RaspDev&nbsp;<sup
+              ><code><i class="fa fa-code"></i></code></sup
+          ></a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarsRaspdev"
+            aria-controls="navbarsRaspdev"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <!-- Menu principal fixed-Top -->
+          <div class="collapse navbar-collapse" id="navbarsRaspdev">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">
+                  <i class="fa fa-home"></i>
+                  &nbsp;Accueil
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">
+                  <i class="fa fa-envelope"></i>
+                  &nbsp;Contact
+                </a>
+              </li>
+              <!-- Menu déroulant Nos solutions -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                >
+                  <i class="fa fa-leaf"></i>
+                  &nbsp;Nos solutions
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-dark rounded-0"
+                  aria-labelledby="dropdown01"
+                >
+                  <li>
+                    <a class="dropdown-item" href="#">Silver</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Gold</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Platinium</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Ultimate</a>
+                  </li>
+                </ul>
+              </li>
+              <!-- Menu déroulant Configuration -->
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdown02"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <i class="fa fa-cogs"></i>
+                  &nbsp;Configuration
+                </a>
+                <ul
+                  class="dropdown-menu dropdown-menu-dark rounded-0"
+                  aria-labelledby="dropdown02"
+                >
+                  <li>
+                    <a
+                      class="dropdown-item"
+                      href="configurer/linux-raspian-sur-raspberry-pi.html"
+                      >Linux Raspbian</a
+                    >
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">Apache</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">php</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">MariaDB</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">phpMyAdmin</a>
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">proFTPD</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">RealVNC</a>
+                  </li>
+                  <li>
+                    <hr class="dropdown-divider" />
+                  </li>
+                  <li>
+                    <a class="dropdown-item" href="#">aaPanel</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+            <!-- Formulaire de recherche avec bouton -->
+            <form class="d-flex">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Rechercher"
+                aria-label="Search"
+              />
+              <button class="btn btn-outline-danger" type="submit">Go</button>
+            </form>
+          </div>
+        </div>
+      </nav>
+      <!-- Barre d'information-->
+      <div class="info container-fluid">
+        <div
+          class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start"
+        >
+          <!-- Menu déroulant langues -->
+          <div class="nav-item dropdown pb-1 d-flex align-items-center">
+            <a
+              class="nav-link active text-light dropdown-toggle"
+              href="#"
+              id="dropdown03"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                class="flags pb-1"
+                src="img/flags/french.png"
+                alt="Français"
+              />
+              &ensp;Français
+            </a>
+            <ul
+              class="dropdown-menu dropdown-menu-dark rounded-0"
+              aria-labelledby="dropdown03"
+            >
+              <li class="nav-item dropdown">
+                <a class="dropdown-item" href="en/index.html" target="_self">
+                  <img
+                    class="flags pb-1"
+                    src="img/flags/english.png"
+                    alt="Anglais"
+                  />
+                  &ensp;Anglais
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="dropdown-item" href="#" target="_self">
+                  <img
+                    class="flags pb-1"
+                    src="img/flags/germany.png"
+                    alt="Allemand"
+                  />
+                  &ensp;Allemand
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="dropdown-item" href="#" target="_self">
+                  <img
+                    class="flags pb-1"
+                    src="img/flags/spain.png"
+                    alt="Espagnol"
+                  />
+                  &ensp;Espagnol
+                </a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="dropdown-item" href="#" target="_self">
+                  <img
+                    class="flags pb-1"
+                    src="img/flags/italy.png"
+                    alt="Italien"
+                  />
+                  &ensp;Italien
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Deuxième menu scrollable -->
+          <ul
+            class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0"
+          >
+            <li>
+              <a class="nav-link px-2 text-light" href="forum/">Forum</a>
+            </li>
+            <li>
+              <a class="nav-link px-2 text-light" href="blog/">Blog</a>
+            </li>
+            <li>
+              <a class="nav-link px-2 text-light" href="faq/">FAQs</a>
+            </li>
+            <li>
+              <a class="nav-link px-2 text-light" href="#">À Propos</a>
+            </li>
+          </ul>
+          <!-- Nombre de membres connectés -->
+          <div>
+            <button
+              type="button"
+              class="btn btn-outline-light text-white position-relative me-4"
+            >
+              Membres connectés
+              <span
+                class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger"
+              >
+                48+
+              </span>
+            </button>
+          </div>
+          <!-- Avatar du profil membre -->
+          <div class="avatar dropdown text-end">
+            <a
+              href="#"
+              class="d-block link-light text-decoration-none dropdown-toggle"
+              id="dropdownUser1"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              <img
+                src="img/admin.png"
+                alt="Admin"
+                width="48"
+                height="48"
+                class="rounded-circle profile"
+              />
+            </a>
+            <span
+              id="status"
+              class="p-1 bg-danger border border-light rounded-circle"
+            >
+            </span>
+            <!-- Menu de profil avec déclenchement de Offcanvas à droite position aside -->
+            <ul
+              class="dropdown-menu dropdown-menu-dark text-small rounded-0"
+              aria-labelledby="dropdownUser1"
+            >
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight1"
+                  aria-controls="offcanvasRight1"
+                >
+                  Supervision des serveurs
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight2"
+                  aria-controls="offcanvasRight2"
+                >
+                  Participer au Forum
+                </button>
+              </li>
+              <li>
+                <button
+                  class="dropdown-item"
+                  type="button"
+                  data-bs-toggle="offcanvas"
+                  data-bs-target="#offcanvasRight3"
+                  aria-controls="offcanvasRight3"
+                >
+                  Gestion de mon compte
+                </button>
+              </li>
+              <li>
+                <hr class="dropdown-divider" />
+              </li>
+              <li>
+                <a class="dropdown-item" href="#">Déconnexion</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main py-0">
+      <!-- Slider de la Home Page-->
+      <section class="sectionOne">
+        <div
+          id="carouselHomePage"
+          class="carousel slide carousel-fade shadow-lg"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#carouselHomePage"
+              data-bs-slide-to="0"
+              class="active"
+              aria-current="true"
+              aria-label="Slide 1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselHomePage"
+              data-bs-slide-to="1"
+              aria-label="Slide 2"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselHomePage"
+              data-bs-slide-to="2"
+              aria-label="Slide 3"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselHomePage"
+              data-bs-slide-to="3"
+              aria-label="Slide 4"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#carouselHomePage"
+              data-bs-slide-to="4"
+              aria-label="Slide 5"
+            ></button>
+          </div>
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+              <img
+                src="images/diapos/slide-1.png"
+                class="d-block w-100"
+                alt="Slide 1"
+              />
+              <div class="carousel-caption d-none d-lg-block">
+                <h5>L'association RaspDev c'est :</h5>
+                <p>
+                  L'opportunité de devenir l'acteur de son propre hébergement
+                  Web.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="images/diapos/slide-2.png"
+                class="d-block w-100"
+                alt="Slide 2"
+              />
+              <div class="carousel-caption d-none d-lg-block">
+                <h5>Hébergement Web Participatif</h5>
+                <p>
+                  C'est parce que chacun y met du siens, que nous y arriverons
+                  tous ensemble.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="images/diapos/slide-3.png"
+                class="d-block w-100"
+                alt="Slide 3"
+              />
+              <div class="carousel-caption d-none d-lg-block">
+                <h5>Hébergement Web Solidaire</h5>
+                <p>
+                  La solidarité de nos membres fait de nos services les plus
+                  efficaces du marché.
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="images/diapos/slide-4.png"
+                class="d-block w-100"
+                alt="Slide 4"
+              />
+              <div class="carousel-caption d-none d-lg-block">
+                <h5>Hébergement Web Économique</h5>
+                <p>
+                  Franchement, ce n'est pas un Raspberry Pi qui va nous
+                  ruiner.&nbsp;<i class="fa-solid fa-face-smile-wink"></i>
+                </p>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <img
+                src="images/diapos/slide-5.png"
+                class="d-block w-100"
+                alt="Slide 5"
+              />
+              <div class="carousel-caption d-none d-lg-block">
+                <h5>Hébergement Web Écologique</h5>
+                <p>
+                  Avec une faible consommation électrique nos infrastructures
+                  sont proches du 0 émission de Co<sup>2</sup>.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sectionTwo">
+        <!-- Texte du slider en accordéon sur les mobiles et tablettes en mode portrait -->
+        <div
+          class="accordion accordion-flush d-block d-lg-none d-md-block d-sm-block w-100"
+          id="accordionHome"
+        >
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingOne">
+              <button
+                class="accordion-button bg-dark text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseOne"
+                aria-expanded="false"
+                aria-controls="collapseOne"
+              >
+                L'association RaspDev c'est :
+              </button>
+            </h2>
+            <div
+              id="collapseOne"
+              class="accordion-collapse collapse show"
+              aria-labelledby="headingOne"
+              data-bs-parent="#accordionHome"
+            >
+              <div class="accordion-body">
+                <div class="accordion-title">
+                  La garantie de bénéficier d'...
+                </div>
+                <ul>
+                  <li>Une communauté de passionnés,</li>
+                  <li>D'un accompagnement total,</li>
+                  <li>Du meilleur rapport qualité / Prix,</li>
+                  <li>De préserver l'environnement</li>
+                </ul>
+                <p class="why">
+                  <i class="fa-solid fa-arrow-down"></i>
+                  &nbsp;&nbsp;Découvrez pourquoi ?&nbsp;&nbsp;
+                  <i class="fa-solid fa-arrow-down"></i>
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingTwo">
+              <button
+                class="accordion-button collapsed bg-dark text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseTwo"
+                aria-expanded="false"
+                aria-controls="collapseTwo"
+              >
+                Hébergement Web Participatif
+              </button>
+            </h2>
+            <div
+              id="collapseTwo"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingTwo"
+              data-bs-parent="#accordionHome"
+            >
+              <div class="accordion-body">
+                C'est parce que chacun y met du siens, que nous y arriverons
+                tous ensemble.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingThree">
+              <button
+                class="accordion-button collapsed bg-dark text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseThree"
+                aria-expanded="false"
+                aria-controls="collapseThree"
+              >
+                Hébergement Web Solidaire
+              </button>
+            </h2>
+            <div
+              id="collapseThree"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingThree"
+              data-bs-parent="#accordionHome"
+            >
+              <div class="accordion-body">
+                La solidarité de nos membres fait de nos services les plus
+                efficaces du marché.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFour">
+              <button
+                class="accordion-button collapsed rounded-0 bg-dark text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFour"
+                aria-expanded="false"
+                aria-controls="collapseFour"
+              >
+                Hébergement Web Économique
+              </button>
+            </h2>
+            <div
+              id="collapseFour"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFour"
+              data-bs-parent="#accordionHome"
+            >
+              <div class="accordion-body border-bottom">
+                Franchement, ce n'est pas un Raspberry Pi qui va nous
+                ruiner.&nbsp;
+                <i class="fa-solid fa-face-smile-wink"></i>
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h2 class="accordion-header" id="headingFive">
+              <button
+                class="accordion-button collapsed rounded-0 bg-dark text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#collapseFive"
+                aria-expanded="false"
+                aria-controls="collapseFive"
+              >
+                Hébergement Web Écologique
+              </button>
+            </h2>
+            <div
+              id="collapseFive"
+              class="accordion-collapse collapse"
+              aria-labelledby="headingFive"
+              data-bs-parent="#accordionHome"
+            >
+              <div class="accordion-body border-bottom">
+                Avec une faible consommation électrique nos infrastructures sont
+                proches du 0 émission de Co<sup>2</sup>.
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 1ère section de cartes -->
+      <section class="sectionThree px-4 mt-4">
+        <div class="row">
+          <!-- 1ère carte -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-4">
+            <div class="card card01 shadow-lg border-0 h-100">
+              <div class="border-bottom">
+                <img
+                  class="img-fluid w-100"
+                  src="images/cards/logo-apache.png"
+                  alt="Apache"
+                />
+              </div>
+              <div class="card-body bg-dark text-white d-flex flex-column">
+                <h5 class="card-title">Apache</h5>
+                <p class="card-text">
+                  Apache est un logiciel serveur, qui permet d'éxécuter des
+                  requêtes HTTP pour les sites web.
+                </p>
+                <a
+                  class="btn btn-outline-danger mt-auto"
+                  href="config/apache.html"
+                  target="_self"
+                >
+                  Voir la procédure
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 2ème carte -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-4">
+            <div class="card card02 shadow-lg border-0 h-100">
+              <div class="border-bottom">
+                <img
+                  class="img-fluid w-100"
+                  src="images/cards/logo-php.png"
+                  alt="php"
+                />
+              </div>
+              <div class="card-body bg-dark text-white d-flex flex-column">
+                <h5 class="card-title">php</h5>
+                <p class="card-text">
+                  PHP, est un langage de script à usage général,
+                  particulièrement adapté au développement pour le web.
+                </p>
+                <a
+                  href="config/php.html"
+                  class="btn btn-outline-danger mt-auto"
+                >
+                  Voir la procédure
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 3ème carte -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-4">
+            <div class="card card03 shadow-lg border-0 h-100">
+              <div class="border-bottom">
+                <img
+                  class="img-fluid w-100"
+                  src="images/cards/logo-mariadb.png"
+                  alt="MariaDB"
+                />
+              </div>
+              <div class="card-body bg-dark text-white d-flex flex-column">
+                <h5 class="card-title">MariaDB</h5>
+                <p class="card-text">
+                  MariaDB server, est l'un des serveurs de base de données les
+                  plus populaires au monde pour le web.
+                </p>
+                <a
+                  class="btn btn-outline-danger mt-auto"
+                  href="config/mariadb.html"
+                  target="_self"
+                >
+                  Voir la procédure
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 4ème carte -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-4">
+            <div class="card card04 shadow-lg border-0 h-100">
+              <div class="border-bottom">
+                <img
+                  class="img-fluid w-100"
+                  src="images/cards/logo-phpmyadmin.png"
+                  alt="phpMyAdmin"
+                />
+              </div>
+              <div class="card-body bg-dark text-white d-flex flex-column">
+                <h5 class="card-title">phpMyAdmin</h5>
+                <p class="card-text">
+                  phpMyAdmin, est un logiciel gratuit écrit en PHP, destiné à
+                  gérer les bases de données de MySQL.
+                </p>
+                <a
+                  class="btn btn-outline-danger mt-auto"
+                  href="config/phpmyadmin.html"
+                  target="_self"
+                >
+                  Voir la procédure
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- 2ème section de cartes -->
+      <section class="sectionFour px-4">
+        <div class="row">
+          <!-- 1ère carte -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-4">
+            <div class="card card05 shadow-lg border-0 h-100">
+              <div class="border-bottom">
+                <img
+                  class="img-fluid w-100"
+                  src="images/cards/logo-debian.png"
+                  alt="Debian"
+                />
+              </div>
+              <div class="card-body bg-dark text-white d-flex flex-column">
+                <h5 class="card-title">Raspberry Pi OS</h5>
+                <p class="card-text">
+                  Il s'agit d'une modification de Debian spécifiquement adaptée
+                  pour les systèmes à puce de type ARM.
+                </p>
+                <a
+                  class="btn btn-outline-danger mt-auto"
+                  href="configurer/linux-raspian-sur-raspberry-pi.html"
+                  target="_self"
+                >
+                  Voir la procédure
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 2ème carte -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-4">
+            <div class="card card06 shadow-lg border-0 h-100">
+              <div class="border-bottom">
+                <img
+                  class="img-fluid w-100"
+                  src="images/cards/logo-proftpd.png"
+                  alt="proFTPD"
+                />
+              </div>
+              <div class="card-body bg-dark text-white d-flex flex-column">
+                <h5 class="card-title">ProFTPD</h5>
+                <p class="card-text">
+                  ProFTPD est un serveur FTP sécurisé et configurable,
+                  particulièrement adapté pour le serveur Apache.
+                </p>
+                <a
+                  class="btn btn-outline-danger mt-auto"
+                  href="config/proftpd.html"
+                  target="_self"
+                >
+                  Voir la procédure
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 3ème carte -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-4">
+            <div class="card card07 shadow-lg border-0 h-100">
+              <div class="border-bottom">
+                <img
+                  class="img-fluid w-100"
+                  src="images/cards/logo-realvnc.png"
+                  alt="RealVNC"
+                />
+              </div>
+              <div class="card-body bg-dark text-white d-flex flex-column">
+                <h5 class="card-title">RealVNC</h5>
+                <p class="card-text">
+                  RealVNC®, est un logiciel d'accès à distance, rapide et
+                  ultra-sécurisé qui permet le partage d'écran.
+                </p>
+                <a
+                  class="btn btn-outline-danger mt-auto"
+                  href="config/realvnc.html"
+                  target="_self"
+                >
+                  Voir la procédure
+                </a>
+              </div>
+            </div>
+          </div>
+          <!-- 4ème carte -->
+          <div class="col-lg-3 col-md-6 col-sm-6 mb-4 mb-md-4">
+            <div class="card card08 shadow-lg border-0 h-100">
+              <div class="border-bottom">
+                <img
+                  class="img-fluid w-100"
+                  src="images/cards/logo-vsc.png"
+                  alt="Visual Studio Code"
+                />
+              </div>
+              <div class="card-body bg-dark text-white d-flex flex-column">
+                <h5 class="card-title">Visual Studio Code</h5>
+                <p class="card-text">
+                  Visual Studio Code, est un éditeur de code pour créer et
+                  déboguer des applications Web et cloud.
+                </p>
+                <a
+                  class="btn btn-outline-danger mt-auto"
+                  href="config/vscode.html"
+                  target="_self"
+                >
+                  Voir la procédure
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <aside class="aside">
+      <!-- Fenêtre lattérale accès superviseur aaPanel -->
+      <div
+        class="offcanvas offcanvas-end adminOne"
+        tabindex="-1"
+        id="offcanvasRight1"
+        aria-labelledby="offcanvasRightLabel1"
+      >
+        <div class="offcanvas-header bg-dark bg-gradient">
+          <h5 id="offcanvasRightLabel1" class="text-light">
+            Je supervise mon serveur
+          </h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Fermer"
+          ></button>
+        </div>
+        <div class="offcanvas-body transparent-bg-brown">
+          <h5 class="offcanvas-box">Accès au tableau de bord aaPanel</h5>
+          <!-- Formulaire de connexion -->
+          <form class="d-flex flex-column">
+            <input
+              class="form-control my-3"
+              type="email"
+              placeholder="Votre email"
+              aria-label="email"
+            />
+            <input
+              class="form-control my-3"
+              type="password"
+              placeholder="Mot de passe"
+              aria-label="password"
+            />
+            <button class="btn btn-success my-3" type="submit">
+              Connexion
+            </button>
+            <a class="link-offcanevas" href="#" target="_blank"
+              >Mot de passe oublié ?</a
+            >
+          </form>
+        </div>
+      </div>
+      <!-- Fenêtre latérale accès WordPress - Blog -->
+      <div
+        class="offcanvas offcanvas-end adminTwo"
+        tabindex="-1"
+        id="offcanvasRight2"
+        aria-labelledby="offcanvasRightLabel2"
+      >
+        <div class="offcanvas-header bg-dark bg-gradient">
+          <h5 id="offcanvasRightLabel2" class="text-light">
+            Je participe au Forum
+          </h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Fermer"
+          ></button>
+        </div>
+        <div class="offcanvas-body transparent-bg-brown">
+          <h5 class="offcanvas-box">Accès au Forum RaspDev</h5>
+          <!-- Formulaire de connexion -->
+          <form class="d-flex flex-column">
+            <input
+              class="form-control my-3"
+              type="email"
+              placeholder="Votre email"
+              aria-label="email"
+            />
+            <input
+              class="form-control my-3"
+              type="password"
+              placeholder="Mot de passe"
+              aria-label="password"
+            />
+            <button class="btn btn-success my-3" type="submit">
+              Connexion
+            </button>
+            <a class="link-offcanevas" href="#" target="_blank"
+              >Mot de passe oublié ?</a
+            >
+          </form>
+        </div>
+      </div>
+      <!-- Fenêtre latérale accès PrestaShop - Compte Clients -->
+      <div
+        class="offcanvas offcanvas-end adminThree"
+        tabindex="-1"
+        id="offcanvasRight3"
+        aria-labelledby="offcanvasRightLabel3"
+      >
+        <div class="offcanvas-header bg-dark bg-gradient">
+          <h5 id="offcanvasRightLabel3" class="text-light">
+            Je gère mon compte
+          </h5>
+          <button
+            type="button"
+            class="btn-close btn-close-white text-reset"
+            data-bs-dismiss="offcanvas"
+            aria-label="Fermer"
+          ></button>
+        </div>
+        <div class="offcanvas-body transparent-bg-brown">
+          <h5 class="offcanvas-box">Accès à mon espace membre</h5>
+          <!-- Formulaire de connexion -->
+          <form class="d-flex flex-column">
+            <input
+              class="form-control my-3"
+              type="email"
+              placeholder="Votre email"
+              aria-label="email"
+            />
+            <input
+              class="form-control my-3"
+              type="password"
+              placeholder="Mot de passe"
+              aria-label="password"
+            />
+            <button class="btn btn-success my-3" type="submit">
+              Connexion
+            </button>
+            <a class="link-offcanevas" href="#" target="_blank"
+              >Mot de passe oublié ?</a
+            >
+          </form>
+        </div>
+      </div>
+    </aside>
+
+    <!-- En tête du footer -->
+    <footer
+      class="footer d-flex flex-wrap justify-content-between align-items-center"
+    >
+      <div class="container-fluid bg-dark shadow-lg py-3">
+        <div class="col-md-4 d-flex align-items-center">
+          <span class="text-decoration-none">
+            <img class="logo pb-1" src="img/logo.svg" alt="Logo" />
+          </span>
+          <a class="footer-brand text-white pt-1" href="#" target="_self">
+            RaspDev&nbsp;
+            <sup
+              ><code><i class="fa fa-code"></i></code
+            ></sup>
+          </a>
+        </div>
+        <ul class="navbar-nav d-flex flex-row-reverse">
+          <!-- Icônes réseaux sociaux -->
+          <li class="nav-item me-1">
+            <a class="link-footer" href="#" rel="nofollow" target="_blank">
+              <i class="fab fa-facebook-f"> </i>
+            </a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="link-footer" href="#" rel="nofollow" target="_blank">
+              <i class="fab fa-linkedin"> </i>
+            </a>
+          </li>
+          <li class="nav-item me-3">
+            <a class="link-footer" href="#" rel="nofollow" target="_blank">
+              <i class="fab fa-github"> </i>
+            </a>
+          </li>
+        </ul>
+
+        <!-- 1ère colonne de liens -->
+        <div class="container-fluid bg-dark pt-3">
+          <div class="row align-items-start">
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <h6 class="title-footer">Hébergement Web</h6>
+              <ul class="column">
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.apache.org/"
+                    target="_blank"
+                  >
+                    Apache - 2.4.52
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.php.net/"
+                    target="_blank"
+                  >
+                    php - 7.4.28 (cli)
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://mariadb.org/"
+                    target="_blank"
+                  >
+                    MariaDB - 10.7.3-GA
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.phpmyadmin.net/"
+                    target="_blank"
+                  >
+                    phpMyAdmin - 5.1.3
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.postfix.org/"
+                    target="_blank"
+                  >
+                    Postfix - 3.7
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- 2ème colone de liens -->
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <h6 class="title-footer">CMS Pré-installés</h6>
+              <ul class="column">
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://fr.wordpress.org/"
+                    target="_blank"
+                  >
+                    Wordpress - 5.9.1
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.joomla.org/"
+                    target="_blank"
+                  >
+                    Joomla - 4.1.0
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.drupal.org/"
+                    target="_blank"
+                  >
+                    Drupal - 9.3.6
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.prestashop.com/fr"
+                    target="_blank"
+                  >
+                    Prestashop - 1.7.8.3
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.opencart.com/"
+                    target="_blank"
+                  >
+                    OpenCart - 3.0.3.8
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- 3ème colonne de liens -->
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <h6 class="title-footer">Outils de gestion</h6>
+              <ul class="column">
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.aapanel.com/index.html"
+                    target="_blank"
+                  >
+                    aaPanel - 6.8.21
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.pureftpd.org/project/pure-ftpd/"
+                    target="_blank"
+                  >
+                    Pure-FTPD - 1.0.50
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.realvnc.com/fr/"
+                    target="_blank"
+                  >
+                    RealVNC - 6.9.0
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.cloudflare.com/fr-fr/"
+                    target="_blank"
+                  >
+                    CloudFlare - Domaine & DNS
+                  </a>
+                </li>
+                <li>
+                  <a class="link-footer p-0" href="#" target="_blank"> # </a>
+                </li>
+              </ul>
+            </div>
+            <!-- 4ème colonne de liens -->
+            <div class="col-lg-3 col-md-3 col-sm-6">
+              <h6 class="title-footer">Partenaires</h6>
+              <ul class="column">
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.raspberrypi.com/"
+                    target="_blank"
+                  >
+                    Raspberry pi.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.network-systems.fr/"
+                    target="_blank"
+                  >
+                    Network Systems.fr
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.isphers.com/"
+                    target="_blank"
+                  >
+                    iSphers.com
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.consultia.expert/"
+                    target="_blank"
+                  >
+                    Consultia.expert
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="link-footer p-0"
+                    href="https://www.composia.eu/"
+                    target="_blank"
+                  >
+                    Composia.eu
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- Zone d'abonnement à la newsletter -->
+          <div class="container-fluid">
+            <div
+              class="d-flex flex-wrap justify-content-start align-items-center py-3 col-lg-6 col-md-6 col-sm-10 col-xs-10"
+            >
+              <div class="newsletter">
+                <!-- Titre du bloc d'inscription à la newsletter -->
+                <h6 class="text-white">Abonnez-vous !</h6>
+                <!-- Texte de l'inscription à la newsletter -->
+                <p class="text-white">
+                  Recevez les nouveautés et les mises à jour mensuellement.
+                </p>
+                <div class="d-flex w-100 gap-2">
+                  <!-- Label caché du input -->
+                  <label for="newsletter" class="visually-hidden">
+                    Votre Email
+                  </label>
+                  <!-- Input -->
+                  <input
+                    id="newsletter"
+                    type="text"
+                    class="form-control"
+                    placeholder="Votre Email"
+                  />
+                  <!-- Bouton personnalisé d'envoie du formulaire -->
+                  <button class="btn btn-sm btn-outline-danger" type="button">
+                    S'inscrire
+                  </button>
+                </div>
+                <!-- Formulaire d'adonnement avec case à cocher pour la politique de confidentialité -->
+                <div class="checkbox my-3">
+                  <form>
+                    <input
+                      type="checkbox"
+                      id="subscribeNews"
+                      name="subscribe"
+                      value="newsletter"
+                    />
+                    <label for="subscribeNews">
+                      <a
+                        class="link-footer"
+                        href="privacy.html"
+                        target="_blank"
+                      >
+                        Veuillez accepter notre politique de confidentialité
+                      </a>
+                    </label>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- Liens divers - Plan du site et pages en relation avec la loi -->
+          <div id="extra-footer" class="container">
+            <ul class="list-inline text-center">
+              <li class="list-inline-item">
+                <a class="link-legal" href="sitemap.html" target="_self">
+                  <i class="fa-solid fa-sitemap"> </i>
+                  &nbsp;Plan du site&nbsp;
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="link-legal" href="mentions.html" target="_self">
+                  <i class="fa-solid fa-legal"> </i>
+                  &nbsp;Mentions légales&nbsp;
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="link-legal" href="privacy.html" target="_self">
+                  <i class="fa-solid fa-question"> </i>
+                  &nbsp;Politique de confidentialité&nbsp;
+                </a>
+              </li>
+              <li class="list-inline-item">
+                <a class="link-legal" href="cgu.html" target="_self">
+                  <i class="fa-solid fa-info"> </i>
+                  &nbsp;CGU
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Retour en haut de la page -->
+    <div id="jsScroll" class="scroll" onclick="scrollToTop();">
+      <i class="fa-solid fa-angle-up"></i>
+    </div>
+    <script src="js/scrollToTop.js"></script>
+    <!-- Cookies Axeptio -->
+    <script>
+      window.axeptioSettings = {
+        clientId: "6228a96be4581c3192f493af",
+      };
+      (function (d, s) {
+        var t = d.getElementsByTagName(s)[0],
+          e = d.createElement(s);
+        e.async = true;
+        e.src = "//static.axept.io/sdk.js";
+        t.parentNode.insertBefore(e, t);
+      })(document, "script");
+    </script>
+    <!-- Fonts Awesome icons -->
+    <script
+      src="https://kit.fontawesome.com/0f3ecde558.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Popper JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+      integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+      integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
